@@ -5,29 +5,23 @@
 #                                                     +:+ +:+         +:+      #
 #    By: obajja <obajja@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/14 11:35:55 by obajja            #+#    #+#              #
-#    Updated: 2025/10/14 11:35:58 by obajja           ###   ########.fr        #
+#    Created: 2025/10/10 14:17:02 by obajja            #+#    #+#              #
+#    Updated: 2025/10/10 19:33:45 by obajja           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-ifneq ($(filter clean fclean, $(MAKECMDGOALS)),)
-$(info Cleaning Bank Test 🚮)
-else
-$(info Compiling Bank Test 🏦)
-endif
-
-NAME = Bank
-CC = c++
-RM = rm -f
-CFLAGS = -Wall -Wextra -Werror -std=c++98
-INCLUDES = -I.
-HEADER_FILES = Account.hpp
-SRC = Account.cpp tests.cpp
+NAME 			= Harl
+CC	 			= c++
+RM				= rm -f
+FLAGS			= -Werror -Wextra -Wall -std=c++98
+INCLUDES 		= -I.
+SRCS 			= Harl.cpp main.cpp
+HEADER_FILES	= Harl.hpp
 
 all: $(NAME)
 
-$(NAME): $(SRC) $(HEADER_FILES)
-	$(CC) $(CFLAGS) $(INCLUDES) $(SRC) -o $(NAME)
+$(NAME): $(SRCS)
+	$(CC) $(CFLAGS) $(INCLUDES) $(SRCS) -o $(NAME)
 
 clean:
 	$(RM) $(NAME)

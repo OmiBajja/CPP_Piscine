@@ -1,7 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: obajja <obajja@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/10/14 11:30:19 by obajja            #+#    #+#              #
+#    Updated: 2025/10/14 11:32:21 by obajja           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 ifneq ($(filter clean fclean, $(MAKECMDGOALS)),)
 $(info Cleaning megaphone 🚮)
 else
-$(info Compiling megaphone 🎮)
+$(info Compiling megaphone 📣)
 endif
 
 NAME = megaphone

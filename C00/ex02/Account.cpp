@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Account.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/14 11:34:34 by obajja            #+#    #+#             */
+/*   Updated: 2025/10/14 11:37:58 by obajja           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -29,17 +41,14 @@ int	Account::getNbAccounts( void ){
 
 int	Account::getTotalAmount( void ){
     return (_totalAmount);
-    
 }
 
 int	Account::getNbDeposits( void ){
     return (_totalNbDeposits);
-    
 }
 
 int	Account::getNbWithdrawals( void ){
     return (_totalNbWithdrawals);
-    
 }
 
 void	Account::displayAccountsInfos( void ){

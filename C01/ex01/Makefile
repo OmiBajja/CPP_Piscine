@@ -5,24 +5,24 @@
 #                                                     +:+ +:+         +:+      #
 #    By: obajja <obajja@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/14 11:35:55 by obajja            #+#    #+#              #
-#    Updated: 2025/10/14 11:35:58 by obajja           ###   ########.fr        #
+#    Created: 2025/10/10 14:18:18 by obajja            #+#    #+#              #
+#    Updated: 2025/10/10 14:18:19 by obajja           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ifneq ($(filter clean fclean, $(MAKECMDGOALS)),)
-$(info Cleaning Bank Test 🚮)
+$(info Cleaning BrainzHorde 🚮)
 else
-$(info Compiling Bank Test 🏦)
+$(info Compiling BrainzHorde 🎮)
 endif
 
-NAME = Bank
+NAME = Zombie
 CC = c++
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 INCLUDES = -I.
-HEADER_FILES = Account.hpp
-SRC = Account.cpp tests.cpp
+HEADER_FILES = Zombie.hpp
+SRC = Zombie.cpp zombieHorde.cpp main.cpp
 
 all: $(NAME)
 
