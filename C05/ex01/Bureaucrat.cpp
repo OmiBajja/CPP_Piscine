@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 15:16:30 by obajja            #+#    #+#             */
-/*   Updated: 2025/11/20 18:33:43 by obajja           ###   ########.fr       */
+/*   Updated: 2025/11/25 15:23:20 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,14 @@ Bureaucrat & Bureaucrat::operator--( void )
         this->grade++;
     return (*this);
 }
+
+void  Bureaucrat::signForm( Form & src )
+{
+    src.beSigned(*this);
+    src.setSignature();
+    std::cout << this->getName() << " signed " << src.getName() << std::endl;
+}
+
 
 std::ostream & operator<<( std::ostream& os, Bureaucrat const & src)
 {

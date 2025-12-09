@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 13:41:35 by obajja            #+#    #+#             */
-/*   Updated: 2025/11/20 18:43:01 by obajja           ###   ########.fr       */
+/*   Updated: 2025/11/24 17:37:37 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,52 @@ int main()
         std::cout << e.what() << std::endl;
     }
 
+    try{
+        Bureaucrat Joe("Joe", 2);
+        std::cout << Joe << std::endl;
+        Form Piscine("Last Exam", 6, 23);
+        std::cout << Piscine << std::endl;
+        Joe.signForm(Piscine);
+    }
+    catch(std::exception & e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+
+    try{
+        Bureaucrat Francois("Francois", 136);
+        std::cout << Francois << std::endl;
+        Form DrivingLicense("Driving Exam", 6, 23);
+        std::cout << DrivingLicense << std::endl;
+        Francois.signForm(DrivingLicense);
+    }
+    catch(std::exception & e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+    
+    try{
+        Bureaucrat Giacomo("Giacomo", 136);
+        std::cout << Giacomo << std::endl;
+        Form MedicalExam("Blood Test", 0, 2);
+        std::cout << MedicalExam << std::endl;
+        Giacomo.signForm(MedicalExam);
+    }
+    catch(std::exception & e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+
+    try{
+        Bureaucrat Hamza("Hamza", 136);
+        std::cout << Hamza << std::endl;
+        Form EntranceExam("Uni Test", 10, 200);
+        std::cout << EntranceExam << std::endl;
+        Hamza.signForm(EntranceExam);
+    }
+    catch(std::exception & e)
+    {
+        std::cout << e.what() << std::endl;
+    }
     return (0);
 }
