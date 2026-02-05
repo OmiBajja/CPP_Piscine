@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 16:08:03 by obajja            #+#    #+#             */
-/*   Updated: 2025/10/30 02:04:05 by obajja           ###   ########.fr       */
+/*   Updated: 2025/10/30 15:11:13 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,35 @@ int main()
     me->use(1, *bob);
 
     ICharacter* mike = new Character("mike");
+    tmp = src->createMateria("ice");
+    Cure *rat = new Cure();
+    src->learnMateria(rat);
+    src->learnMateria(rat);
+    src->learnMateria(rat);
+    src->learnMateria(rat);
+    src->learnMateria(rat);
+    src->learnMateria(rat);
+    src->learnMateria(rat);
+    me->equip(tmp);
+    me->equip(tmp);
+    me->equip(tmp);
+    me->equip(tmp);    
+    tmp = src->createMateria("cure");
+    me->equip(tmp);
     me->use(0, *mike);
     me->use(1, *mike);
+    me->use(2, *mike);
+    me->unequip(2);
+    me->unequip(2);
+    me->use(2, *mike);
+    me->unequip(0);
+    me->use(1, *mike);
+    me->use(3, *mike);
+    me->use(6, *mike);
+    me->use(612312, *mike);
 
+
+    
     delete bob;
     delete me;
     delete src;

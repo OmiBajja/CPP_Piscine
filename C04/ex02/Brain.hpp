@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 12:55:53 by obajja            #+#    #+#             */
-/*   Updated: 2025/10/28 13:00:14 by obajja           ###   ########.fr       */
+/*   Updated: 2025/10/30 14:04:28 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ class Brain{
         Brain ( Brain const & src );
         ~Brain ( void );
         Brain & operator=( Brain const & src );
+        std::string getIdea( int idx ) const;
+        void setIdea( std::string const thought, int idx);
 
-    protected:
+    private:
         std::string ideas[100];
 
 };
-
 
 #endif

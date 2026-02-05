@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 13:09:37 by obajja            #+#    #+#             */
-/*   Updated: 2025/10/28 13:48:17 by obajja           ###   ########.fr       */
+/*   Updated: 2025/10/30 14:07:04 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ class Dog: public Animal{
         ~Dog ( void );
         Dog & operator=( Dog const & src );
         void makeSound ( void ) const;
+        std::string getIdea( int idx ) const;
+        void setIdea( std::string const thought, int idx);
+
     private:
         Brain *brain;
     

@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 16:14:05 by obajja            #+#    #+#             */
-/*   Updated: 2025/10/30 01:04:16 by obajja           ###   ########.fr       */
+/*   Updated: 2025/10/30 14:58:15 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,13 @@ std::string const & AMateria::getType() const
 {
     return (this->type);
 }
+
+AMateria & AMateria::operator=( AMateria const & src )
+{
+    this->type = src.type;
+    return (*this);
+}
+
 
 void AMateria::use(ICharacter& target)
 {

@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 16:32:20 by obajja            #+#    #+#             */
-/*   Updated: 2025/10/30 01:19:39 by obajja           ###   ########.fr       */
+/*   Updated: 2025/11/12 11:44:12 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Character: public ICharacter{
         void equip(AMateria* m);
         void unequip(int idx);
         void use(int idx, ICharacter& target);
-    
+
     private:
         std::string name;
         AMateria *inventory[4];

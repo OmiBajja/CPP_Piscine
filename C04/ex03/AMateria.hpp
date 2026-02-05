@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 16:01:03 by obajja            #+#    #+#             */
-/*   Updated: 2025/10/30 01:03:46 by obajja           ###   ########.fr       */
+/*   Updated: 2025/10/30 15:14:39 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ class AMateria{
         AMateria(AMateria const & src);
         AMateria();
         virtual ~AMateria();
-        
+        AMateria & operator=( AMateria const & src );
+
         std::string const & getType() const;
 
         virtual AMateria* clone() const = 0;

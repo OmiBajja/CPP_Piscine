@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 16:30:37 by obajja            #+#    #+#             */
-/*   Updated: 2025/10/30 00:55:18 by obajja           ###   ########.fr       */
+/*   Updated: 2025/10/30 15:00:25 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ Cure & Cure::operator=(Cure const & src)
 AMateria* Cure::clone() const
 {
     AMateria *result = new Cure();
-
     return(result);
 }
 
