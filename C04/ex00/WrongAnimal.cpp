@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:20:07 by obajja            #+#    #+#             */
-/*   Updated: 2025/10/27 18:26:11 by obajja           ###   ########.fr       */
+/*   Updated: 2025/10/30 12:51:48 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ std::string WrongAnimal::getType( void ) const
 
 WrongAnimal::WrongAnimal ( void )
 {
-
+    this->type = "Cthulhu";
 }
 
 WrongAnimal::WrongAnimal ( WrongAnimal const & src)

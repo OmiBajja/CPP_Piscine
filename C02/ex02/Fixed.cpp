@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:22:51 by obajja            #+#    #+#             */
-/*   Updated: 2025/10/20 16:03:10 by obajja           ###   ########.fr       */
+/*   Updated: 2025/11/13 14:44:41 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -211,4 +211,10 @@ std::ostream & operator<<( std::ostream& os, Fixed const & src)
     result = src.toFloat();
     os << result;
     return (os);
+}
+
+Fixed & Fixed::operator-( void)
+{
+    this->nombre_vf *= -1;
+    return (*this);
 }

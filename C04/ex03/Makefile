@@ -6,7 +6,7 @@
 #    By: obajja <obajja@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/27 12:58:46 by obajja            #+#    #+#              #
-#    Updated: 2025/10/30 01:17:01 by obajja           ###   ########.fr        #
+#    Updated: 2025/10/30 14:23:36 by obajja           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ endif
 NAME = Materias
 CC = c++
 RM = rm -rf
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJ_DIR	= obj/
 OBJS = $(addprefix $(OBJ_DIR), $(notdir $(SRC:.cpp=.o)))
 INCLUDES = -I.

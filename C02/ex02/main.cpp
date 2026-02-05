@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:22:21 by obajja            #+#    #+#             */
-/*   Updated: 2025/10/20 13:40:51 by obajja           ###   ########.fr       */
+/*   Updated: 2025/11/13 14:45:35 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,7 @@ int main( void ) {
 
     std::cout << Fixed::max( a, b ) << std::endl;
 
+    std::cout << -a << std::endl;
+    
     return 0;
 }

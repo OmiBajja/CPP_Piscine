@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 16:56:48 by obajja            #+#    #+#             */
-/*   Updated: 2025/10/30 02:01:16 by obajja           ###   ########.fr       */
+/*   Updated: 2025/10/30 02:22:12 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,8 @@ void Character::equip(AMateria* m)
 {
     for (int i = 0; i < 4; i++)
     {
+        if (this->inventory[i] == m)
+            return ;
         if (this->inventory[i] == 0)
         {
             this->inventory[i] = m;
@@ -118,8 +120,12 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter& target)
 {
+    if (idx < 0 || idx > 3)
+        return ;
     if (this->inventory[idx] != 0)
     {
         this->inventory[idx]->use(target);
-    } 
+    }
+    else
+        std::cout << "It ain't much... but it's honest work" << std::endl;
 }

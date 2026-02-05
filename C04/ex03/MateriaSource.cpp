@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 20:12:29 by obajja            #+#    #+#             */
-/*   Updated: 2025/10/30 01:53:47 by obajja           ###   ########.fr       */
+/*   Updated: 2025/10/30 15:13:40 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,9 @@ MateriaSource & MateriaSource::operator=(MateriaSource const & src )
 void MateriaSource::learnMateria(AMateria* nugget)
 {
     for (int i = 0; i < 4; i++)
-    {
+    { 
+        if (this->knowledge[i] == nugget)
+            return ;
         if (this->knowledge[i] == 0)
         {
             this->knowledge[i] = nugget;

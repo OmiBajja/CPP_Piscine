@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:22:40 by obajja            #+#    #+#             */
-/*   Updated: 2025/10/20 15:11:59 by obajja           ###   ########.fr       */
+/*   Updated: 2025/11/13 14:42:37 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ class Fixed {
 
         Fixed & operator++( void );
         Fixed operator++( int temp);
+        Fixed & operator-( void );
+
 
         Fixed operator+( Fixed const & src) const;
         Fixed operator-( Fixed const & src) const;
