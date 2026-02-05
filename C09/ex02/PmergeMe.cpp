@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 12:09:46 by obajja            #+#    #+#             */
-/*   Updated: 2026/02/05 14:01:29 by obajja           ###   ########.fr       */
+/*   Updated: 2026/02/05 17:30:22 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,21 +63,18 @@ void PmergeMe::input_sanitizer(int argc, char** av)
         if (( *endptr != '\0' || num < 0 || num > INT_MAX ))
             throw InvalidNumbersException();
         else
-        {
             this->_unsorted.push_back(num);
-            this->_unseasoned.push_back(num);
-        }
     }
 
     _size = argc - 1;
-    vector_printer(_unsorted, "Before: ");
+    vector_printer(_unsorted, "\nBefore: ");
     std::vector<int> sorted = vector_sorter(this->_unsorted);
     gettimeofday(&end, NULL);
 
     double elapsed_time_vec = (end.tv_sec - start.tv_sec) * 1000000;
     elapsed_time_vec = (elapsed_time_vec + (end.tv_usec - start.tv_usec));
     vector_printer(sorted, "After: ");
-    std::cout << "Time to process a range of " << _unsorted.size() << " elements with std::vector : " << elapsed_time_vec << " microseconds" << std::endl;
+    std::cout << "\nTime to process a range of " << _unsorted.size() << " elements with std::vector : " << elapsed_time_vec << " microseconds" << std::endl;
 }
 
 void PmergeMe::dq_input_sanitizer(int argc, char** av)
@@ -94,21 +91,18 @@ void PmergeMe::dq_input_sanitizer(int argc, char** av)
         if (( *endptr != '\0' || num < 0 || num > INT_MAX || num < INT_MIN))
             throw InvalidNumbersException();
         else
-        {
-            this->_unsorted.push_back(num);
             this->_unseasoned.push_back(num);
-        }
     }
 
     _size = argc - 1;
+    // deque_printer(_unseasoned, "\nBefore: ");
     std::deque<int> deque_sorted = deque_sorter(this->_unseasoned);
-    // deque_printer(_unseasoned, "Before: ");
     gettimeofday(&end_deque, NULL);
 
     double elapsed_time_dq = (end_deque.tv_sec - start_deque.tv_sec) * 1000000;
     elapsed_time_dq = (elapsed_time_dq + (end_deque.tv_usec - start_deque.tv_usec));
-    // deque_printer(deque_sorted, "After: ");
-    std::cout << "Time to process a range of " << _unsorted.size() << " elements with std::deque : " << elapsed_time_dq << " microseconds" << std::endl;
+    //deque_printer(deque_sorted, "After: ");
+    std::cout << "\nTime to process a range of " << _unsorted.size() << " elements with std::deque : " << elapsed_time_dq << " microseconds" << std::endl;
 
 }
 

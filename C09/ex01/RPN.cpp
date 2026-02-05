@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 00:49:04 by obajja            #+#    #+#             */
-/*   Updated: 2026/01/14 15:16:06 by obajja           ###   ########.fr       */
+/*   Updated: 2026/02/05 17:20:14 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,24 +57,29 @@ void RPN::RPN_Calc (std::string toCalculate)
     if (_stack.size() == 1)
         std::cout << _stack.top() << std::endl;
     else
-        std::cout << "Error with calculations\n";
+        std::cerr << "Input Error\n";
 }
 
 RPN::~RPN(){}
 
 int operation_handler(int a, int z, char op)
 {
+    long result = 0;
     if (op == '-')
-        return (a - z);
+        result = (long)a - z;
     else if (op == '+')
-        return (a + z);
+        result = (long)a + z;
     else if (op == '*')
-        return (a * z);
+        result = (long)a * z;
     else
     {    
         if (z == 0)
             throw RPN::DivZeroException();
         else
-            return (a / z);
+            result = (long)a / z;
     }
+    if (result > INT_MAX || result < INT_MIN)
+            throw RPN::OverflowException();
+    else
+        return (result);
 }
