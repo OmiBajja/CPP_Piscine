@@ -6,13 +6,13 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 18:12:27 by obajja            #+#    #+#             */
-/*   Updated: 2026/02/04 17:13:45 by obajja           ###   ########.fr       */
+/*   Updated: 2026/02/05 14:28:50 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <vector>
-#include <list>
+#include <deque>
 #include <cstdlib>
 #include <iostream>
 #include <limits.h>
@@ -38,13 +38,14 @@ class PmergeMe{
         };
         
         void input_sanitizer(int argc, char** av);
+        void dq_input_sanitizer(int argc, char** av);
         std::vector<int> vector_sorter(std::vector<int> & to_sort);
-        std::list<int> list_sorter(std::list<int> & to_sort);
+        std::deque<int> deque_sorter(std::deque<int> & to_sort);
 
 
     private:
         std::vector<int>    _unsorted;
-        std::list<int>      _unseasoned;
+        std::deque<int>      _unseasoned;
         std::vector<int>    _sorting;
         int                 _size;
 };
@@ -54,7 +55,7 @@ int     binary_search(std::vector<int>& major, int to_insert);
 void    vector_insert(std::vector<int>& major, int to_insert, int position);
 void    min_insertion(std::vector<int> &major, std::vector<int> &minor, std::vector<int> &jacobsNum);
 
-std::list<int> list_Jacobsthal_fill(int len);
-int     list_binary_search(std::list<int>& major, int to_insert);
-void    list_insert(std::list<int>& major, int to_insert, int position);
-void    list_min_insertion(std::list<int> &major, std::list<int> &minor, std::list<int> &jacobsNum);
+std::deque<int> deque_Jacobsthal_fill(int len);
+int     deque_binary_search(std::deque<int>& major, int to_insert);
+void    deque_insert(std::deque<int>& major, int to_insert, int position);
+void    deque_min_insertion(std::deque<int> &major, std::deque<int> &minor, std::deque<int> &jacobsNum);

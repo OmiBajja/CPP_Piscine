@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 14:51:45 by obajja            #+#    #+#             */
-/*   Updated: 2026/01/15 12:36:23 by obajja           ###   ########.fr       */
+/*   Updated: 2026/02/05 13:56:55 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int main(int argc, char** argv)
     {
         PmergeMe sorting;
         try{
-            sorting.input_sanitizer(argc, &argv[1]);
+            sorting.input_sanitizer(argc, argv);
+            sorting.dq_input_sanitizer(argc, argv);
         }
 
         catch (std::exception & e)
